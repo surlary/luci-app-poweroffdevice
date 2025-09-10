@@ -71,7 +71,7 @@ jobs:
           make package/${PACKAGE_NAME}/{clean,download,compile} -j1 V=s
           find "$SDK_HOME/bin" -type f -name "${PACKAGE_NAME}_*.ipk" \
            -exec cp -f {} "${{ github.workspace }}" \;
-          find / -type f -name "*.ipk"
+          find /tmp/ -type f -name "*.ipk"
            
       - name: 上传 tree
         uses: actions/upload-artifact@v4
