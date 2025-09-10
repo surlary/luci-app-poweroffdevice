@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -yq gettext libncurses5-dev rsync xsltproc
+          sudo apt-get install -yq gettext libncurses5-dev rsync xsltproc jsmin
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -38,8 +38,8 @@ jobs:
       - name: Install jsmin
         run: |
           pip install jsmin
-          jsmin
           po2lmo
+          jsmin
           
       - name: Create Directories
         run: |
