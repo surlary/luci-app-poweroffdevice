@@ -48,7 +48,7 @@ jobs:
             echo "SDK can not be verified!"
             exit 1
           fi
-          tar -Jxf "$SDK_DL_DIR/$SDK_FILE" -C "$SDK_HOME" --strip=1
+          tar --use-compress-program=unzstd -xf "$SDK_DL_DIR/$SDK_FILE" -C "$SDK_HOME" --strip=1
           
       - name: Build Packages
         run: |
