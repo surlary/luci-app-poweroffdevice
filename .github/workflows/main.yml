@@ -36,7 +36,10 @@ jobs:
           python-version: '3.x'
 
       - name: Install jsmin
-        run: pip install jsmin
+        run: |
+          pip install jsmin
+          jsmin
+          po2lmo
           
       - name: Create Directories
         run: |
